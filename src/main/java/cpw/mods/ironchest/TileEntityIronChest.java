@@ -72,7 +72,7 @@ public class TileEntityIronChest extends TileEntity implements IInventory {
     @Override
     public String getInventoryName()
     {
-        return type.name();
+        return type.friendlyName;
     }
 
     public IronChestType getType()
@@ -122,10 +122,7 @@ public class TileEntityIronChest extends TileEntity implements IInventory {
         if (!hasStuff && hadStuff)
         {
             hadStuff = false;
-            for (int i = 0; i < topStacks.length; i++)
-            {
-                topStacks[i] = null;
-            }
+            Arrays.fill(topStacks, null);
             if (worldObj != null)
             {
                 worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);

@@ -5,7 +5,7 @@ tile.ironchest:COPPER.name=Vaskkirst
 tile.ironchest:SILVER.name=Hõbekirst
 tile.ironchest:CRYSTAL.name=Kristallkirst
 tile.ironchest:OBSIDIAN.name=Obsidiaankirst
-tile.ironchest:DIRTCHEST9000.name=Muldkirst 9000!
+tile.ironchest:DIRTCHEST.name=Muldkirst !
 
 item.ironchest:IRONGOLD.name=Raudkirst kuld kirstuks
 item.ironchest:GOLDDIAMOND.name=Kuldkirst teemandist kirstuks

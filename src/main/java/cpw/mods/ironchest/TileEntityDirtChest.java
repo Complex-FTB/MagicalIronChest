@@ -8,34 +8,34 @@ import net.minecraft.nbt.NBTTagString;
 import net.minecraft.util.StatCollector;
 
 public class TileEntityDirtChest extends TileEntityIronChest {
-    private static ItemStack dirtChest9000GuideBook = new ItemStack(Items.written_book);
+    private static ItemStack dirtChestGuideBook = new ItemStack(Items.written_book);
     static {
-        dirtChest9000GuideBook.setTagInfo("author", new NBTTagString("cpw"));
-        dirtChest9000GuideBook.setTagInfo("title", new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest9000.title")));
+        dirtChestGuideBook.setTagInfo("author", new NBTTagString("cpw"));
+        dirtChestGuideBook.setTagInfo("title", new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest.title")));
         NBTTagList pages = new NBTTagList();
-        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest9000.page1")));
-        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest9000.page2")));
-        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest9000.page3")));
-        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest9000.page4")));
-        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest9000.page5")));
-        dirtChest9000GuideBook.setTagInfo("pages", pages);
+        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest.page1")));
+        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest.page2")));
+        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest.page3")));
+        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest.page4")));
+        pages.appendTag(new NBTTagString(StatCollector.translateToLocal("book.ironchest:dirtchest.page5")));
+        dirtChestGuideBook.setTagInfo("pages", pages);
     }
     public TileEntityDirtChest() {
-        super(IronChestType.DIRTCHEST9000);
+        super(IronChestType.DIRTCHEST);
     }
 
     @Override
     public void wasPlaced(EntityLivingBase entityliving, ItemStack itemStack)
     {
         if (!(itemStack.hasTagCompound() && itemStack.getTagCompound().getBoolean("dirtchest"))) {
-            setInventorySlotContents(0, dirtChest9000GuideBook.copy());
+            setInventorySlotContents(0, dirtChestGuideBook.copy());
         }
     }
 
     @Override
     public void removeAdornments()
     {
-        if (chestContents[0] != null && chestContents[0].isItemEqual(dirtChest9000GuideBook)) {
+        if (chestContents[0] != null && chestContents[0].isItemEqual(dirtChestGuideBook)) {
             chestContents[0] = null;
         }
     }

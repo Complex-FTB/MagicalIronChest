@@ -42,7 +42,7 @@ public class GUIChest extends GuiContainer {
         SILVER(184, 238, ResourceList.SILVER, IronChestType.SILVER),
         CRYSTAL(238, 256, ResourceList.DIAMOND, IronChestType.CRYSTAL),
         OBSIDIAN(238, 256, ResourceList.DIAMOND, IronChestType.OBSIDIAN),
-        DIRTCHEST9000(184, 184, ResourceList.DIRT, IronChestType.DIRTCHEST9000);
+        DIRTCHEST(184, 184, ResourceList.DIRT, IronChestType.DIRTCHEST);
 
         private int xSize;
         private int ySize;

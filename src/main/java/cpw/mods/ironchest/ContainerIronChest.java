@@ -84,7 +84,7 @@ public class ContainerIronChest extends Container {
 
     protected void layoutContainer(IInventory playerInventory, IInventory chestInventory, IronChestType type, int xSize, int ySize)
     {
-        if (type == IronChestType.DIRTCHEST9000) {
+        if (type == IronChestType.DIRTCHEST) {
             addSlotToContainer(type.makeSlot(chestInventory, 0, 12 + 4 * 18, 8 + 2 * 18));
         } else {
             for (int chestRow = 0; chestRow < type.getRowCount(); chestRow++)
